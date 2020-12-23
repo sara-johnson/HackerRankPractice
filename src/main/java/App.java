@@ -1,4 +1,5 @@
 import ExerciseClasses.KeywordSuggestions;
+import ExerciseClasses.SlowestKeyPress;
 import ExerciseClasses.TwoSum;
 
 import java.util.Arrays;
@@ -9,8 +10,8 @@ public class App {
         System.out.println();
 
         System.out.println("Problem: Keyword Suggestions");
-        String[] myProducts = new String[]{"bags","baggage","banner","box","cloths"};
-        String myWord = "bags";
+        String[] myProducts1 = new String[]{"bags","baggage","banner","box","cloths"};
+        String myWord1 = "bags";
 
         String[] myProducts2 = new String[]{"mobile","mouse","moneypot","monitor","mousepad"};
         String myWord2 = "mouse";
@@ -28,6 +29,22 @@ public class App {
 
         TwoSum twoSum = new TwoSum();
         System.out.println(Arrays.toString(twoSum.twoSum(arr2, target2)));
+        System.out.println();
+
+        System.out.println("Problem: Slowest Key Press");
+        int[] releaseTimes1 = {9,29,49,50};
+        String keysPressed1 = "cbcd";
+
+        int[] releaseTimes2 = {12,23,36,46,62};
+        String keysPressed2 = "spuda";
+
+        int[] releaseTimes3 = {23,34,43,59,62,80,83,92,97};
+        String keysPressed3 = "qgkzzihfc";
+
+        SlowestKeyPress slowestKeyPress = new SlowestKeyPress();
+        System.out.println(slowestKeyPress.slowestKey(releaseTimes3, keysPressed3));
+
+
 
     }
 }
