@@ -1,7 +1,4 @@
-import ExerciseClasses.AddStrings;
-import ExerciseClasses.KeywordSuggestions;
-import ExerciseClasses.SlowestKeyPress;
-import ExerciseClasses.TwoSum;
+import ExerciseClasses.*;
 
 import java.util.Arrays;
 
@@ -52,5 +49,12 @@ public class App {
 
         AddStrings addStrings = new AddStrings();
         System.out.println(addStrings.addStrings(five, two));
+        System.out.println();
+
+        System.out.println("Problem: FizzBuzz");
+        int fifteen = 15;
+        int sixtySeven = 67;
+        FizzBuzz fizzBuzz = new FizzBuzz();
+        System.out.println(fizzBuzz.fizzBuzz(fifteen));
     }
 }
