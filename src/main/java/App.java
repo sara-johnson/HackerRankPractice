@@ -56,5 +56,13 @@ public class App {
         int sixtySeven = 67;
         FizzBuzz fizzBuzz = new FizzBuzz();
         System.out.println(fizzBuzz.fizzBuzz(fifteen));
+        System.out.println();
+
+        System.out.println("Problem: Valid Palindrome");
+        String palindrome1 = "race a car"; //false
+        String palindrome2 = "A man, a plan, a canal: Panama"; //true
+        String palindrome3 = ""; //true
+        ValidPalindrome validPalindrome = new ValidPalindrome();
+        System.out.println(validPalindrome.isPalindrome(palindrome2));
     }
 }
