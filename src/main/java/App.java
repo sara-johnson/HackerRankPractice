@@ -1,6 +1,9 @@
+import AmazonOA.FillTheTruck;
 import ExerciseClasses.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class App {
     public static void main(String[] args) {
@@ -64,5 +67,22 @@ public class App {
         String palindrome3 = ""; //true
         ValidPalindrome validPalindrome = new ValidPalindrome();
         System.out.println(validPalindrome.isPalindrome(palindrome2));
+
+        System.out.println();
+
+        System.out.println("Problem: Fill The Truck");
+        List<Integer> boxes = new ArrayList<>();
+        boxes.add(1);
+        boxes.add(2);
+        boxes.add(3);
+        List<Integer> unitsPerBox = new ArrayList<>();
+        unitsPerBox.add(3);
+        unitsPerBox.add(2);
+        unitsPerBox.add(3);
+
+        FillTheTruck truck = new FillTheTruck();
+        System.out.println(truck.unitsToFillTheTruck(3,
+            boxes, 3, unitsPerBox, 3));
+
     }
 }
