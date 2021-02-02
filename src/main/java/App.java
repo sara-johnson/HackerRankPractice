@@ -1,8 +1,10 @@
 import AmazonOA.FillTheTruck;
+import AmazonOA.SmallestNegativeBalance;
 import ExerciseClasses.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.List;
 
 public class App {
@@ -84,5 +86,24 @@ public class App {
         System.out.println(truck.unitsToFillTheTruck(3,
             boxes, 3, unitsPerBox, 3));
 
+        System.out.println();
+
+        System.out.println("Problem: Smallest Negative Balance");
+        SmallestNegativeBalance.DebtRecord rec1 = new SmallestNegativeBalance.DebtRecord("Alex", "Blake", 2);
+        SmallestNegativeBalance.DebtRecord rec2 = new SmallestNegativeBalance.DebtRecord("Blake", "Alex", 2);
+        SmallestNegativeBalance.DebtRecord rec3 = new SmallestNegativeBalance.DebtRecord("Casey", "Alex", 5);
+        SmallestNegativeBalance.DebtRecord rec4 = new SmallestNegativeBalance.DebtRecord("Blake", "Casey", 7);
+        SmallestNegativeBalance.DebtRecord rec5 = new SmallestNegativeBalance.DebtRecord("Alex", "Blake", 4);
+        SmallestNegativeBalance.DebtRecord rec6 = new SmallestNegativeBalance.DebtRecord("Alex", "Casey", 4);
+        List<SmallestNegativeBalance.DebtRecord> recs = new ArrayList<>();
+        recs.add(rec1);
+        recs.add(rec2);
+        recs.add(rec3);
+        recs.add(rec4);
+        recs.add(rec5);
+        recs.add(rec6);
+
+        SmallestNegativeBalance snb = new SmallestNegativeBalance();
+        snb.findSmallestNegativeBalance(6, 3, recs);
     }
 }
