@@ -1,9 +1,6 @@
 package AmazonOA;
 
 import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Comparator;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
@@ -50,8 +47,9 @@ public class SmallestNegativeBalance {
             } else if (name.getValue() == lowestBalance){
                 lowestPeople.add(name.getKey());
             }
-            System.out.println(name);
         }
+
+        System.out.println(lowestPeople);
 
     }
 
