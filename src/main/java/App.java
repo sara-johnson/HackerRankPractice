@@ -1,3 +1,4 @@
+import AmazonOA.BreakAPalindrome;
 import AmazonOA.FillTheTruck;
 import AmazonOA.SmallestNegativeBalance;
 import ExerciseClasses.*;
@@ -105,5 +106,14 @@ public class App {
 
         SmallestNegativeBalance snb = new SmallestNegativeBalance();
         snb.findSmallestNegativeBalance(6, 3, recs);
+
+        System.out.println();
+
+        System.out.println("Problem: Break A Palindrome");
+        String str1 = "abccba";
+        String str2 = "a";
+        String str3 = "bdggdb";
+        BreakAPalindrome breakPalindrome = new BreakAPalindrome();
+        System.out.println(breakPalindrome.breakPalindrome(str3));
     }
 }
