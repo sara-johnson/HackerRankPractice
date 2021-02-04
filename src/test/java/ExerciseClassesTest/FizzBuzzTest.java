@@ -1,11 +1,12 @@
 package ExerciseClassesTest;
 
 import ExerciseClasses.FizzBuzz;
+import org.junit.jupiter.api.Test;
 
 import java.util.List;
 
-import org.junit.Assert;
-import org.junit.jupiter.api.Test;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 
 public class FizzBuzzTest {
 
@@ -19,6 +20,6 @@ public class FizzBuzzTest {
         List<String> resultList = fizzBuzz.fizzBuzz(input_9);
 
         //THEN
-        Assert.assertEquals(9, resultList.size());
+        assertEquals(9, resultList.size());
     }
 }
