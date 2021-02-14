@@ -4,7 +4,7 @@ import AmazonOA.DebuggingPractice.Debugging;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.Assert.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
@@ -29,21 +29,21 @@ public class DebuggingTest {
     @Test
     public void calculateSumOfNumbersInString_endsWithDigit() {
         String input = "Juicy.mp4";
-        int expected = 1;
+        int expected = 4;
         int result = problems.calculateSumOfNumbersInString(input);
         assertEquals(expected, result);
     }
     @Test
     public void calculateSumOfNumbersInString_startsWithDigits() {
         String input = "16. Unbelievable";
-        int expected = 2;
+        int expected = 16;
         int result = problems.calculateSumOfNumbersInString(input);
         assertEquals(expected, result);
     }
     @Test
     public void calculateSumOfNumbersInString_mixedDigits() {
         String input = "19. Just Playing - 2005 Remaster.mp4";
-        int expected = 7;
+        int expected = 2028;
         int result = problems.calculateSumOfNumbersInString(input);
         assertEquals(expected, result);
     }
@@ -105,21 +105,28 @@ public class DebuggingTest {
     @Test
     public void removeConsecutiveVowels_removesVowels() {
         String input = "school";
-        String expected = "bks";
+        String expected = "schol";
         String result = problems.removeConsecutiveVowels(input);
         assertEquals(expected, result);
     }
     @Test
     public void removeConsecutiveVowels_allVowels() {
         String input = "aeiou";
-        String expected = "";
+        String expected = "a";
         String result = problems.removeConsecutiveVowels(input);
         assertEquals(expected, result);
     }
     @Test
-    public void removeConsecutiveVowels_mixedCase() {
-        String input = "Amazon Music";
-        String expected = "mzn msc";
+    public void removeConsecutiveVowels_startsWithConsecutiveVowels() {
+        String input = "aardvark";
+        String expected = "ardvark";
+        String result = problems.removeConsecutiveVowels(input);
+        assertEquals(expected, result);
+    }
+    @Test
+    public void removeConsecutiveVowels_endsWithConsecutiveVowels() {
+        String input = "matinee";
+        String expected = "matine";
         String result = problems.removeConsecutiveVowels(input);
         assertEquals(expected, result);
     }
@@ -210,7 +217,7 @@ public class DebuggingTest {
         int size = 5;
         int[] arr = new int[] {0, -1, 2, -3, 1};
         int tripletSum = -1;
-        assertEquals(2, problems.countTripletSumPermutations(size, arr, tripletSum));
+        assertEquals(1, problems.countTripletSumPermutations(size, arr, tripletSum));
     }
     @Test
     public void countTripletSumPermutations2() {

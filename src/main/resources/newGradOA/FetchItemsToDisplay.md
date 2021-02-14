@@ -1,13 +1,12 @@
 Fetch Items to Display - New Grad
+
 https://algo.monster/problems/fetch_items_to_display
 
 An online shopping website contains one to many items on each page. To mimic the logic of the website, a programmer has a list of items and each item has its name, relevance, and price. After sorting the items by (name: 0, relevance: 1, price: 2), the programmer is trying to find out a list of items displayed in a chosen page. Given a list of items, the sort column, the sort order (0: ascending, 1: descending), the number of items to be displayed in each page, and a page number,
 
 write an algorithm to determine the list of item names in the specified page while respecting the item's order (Page number starts at 0).
 
-List<String> fetchItemsToDisplay(int numOfItems, HashMap<String, PairInt> items, int sortParameter, int sortOrder, int itemsPerPage, int pageNumber)
-Input
-The input consists of three arguments:
+The input consists of six arguments:
 
 sortParameter: an integer representing the value used for sorting (0 for the name, 1 for relevance, 2 for price)
 

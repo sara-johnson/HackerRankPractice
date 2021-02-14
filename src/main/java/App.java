@@ -1,12 +1,13 @@
 import AmazonOA.BreakAPalindrome;
+import AmazonOA.FetchItemsToDisplay;
 import AmazonOA.FillTheTruck;
 import AmazonOA.SmallestNegativeBalance;
 import ExerciseClasses.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
+import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
@@ -115,5 +116,30 @@ public class App {
         String str3 = "bdggdb";
         BreakAPalindrome breakPalindrome = new BreakAPalindrome();
         System.out.println(breakPalindrome.breakPalindrome(str3));
+
+        System.out.println();
+
+        System.out.println("Problem: Fetch Items To Display");
+        /*
+        FetchItemsToDisplay.TwoInts twoInts1 = new FetchItemsToDisplay.TwoInts(3,4);
+        FetchItemsToDisplay.TwoInts twoInts2 = new FetchItemsToDisplay.TwoInts(10,15);
+        FetchItemsToDisplay.TwoInts twoInts3 = new FetchItemsToDisplay.TwoInts(17,8);
+        List<Map<String, FetchItemsToDisplay.TwoInts>> myMap = new ArrayList<>();
+        myMap.add("item2", twoInts1);
+
+        FetchItemsToDisplay fetchItems = new FetchItemsToDisplay();
+        List<String> items = fetchItems.fetchItems(1, 0, items, 1, 2);
+
+         */
+
+        System.out.println();
+
+        System.out.println("Problem: Three Keyword Suggestions");
+        int numbreviews = 5;
+        List<String> repo = new ArrayList<>(Arrays.asList("mobile", "mouse", "moneypot", "monitor", "mousepad"));
+        String query = "mouse";
+        threeKeywordSuggestions kwSuggestions = new threeKeywordSuggestions();
+        List<List<String>> result = kwSuggestions.keyWordSuggestions(numbreviews, repo, query);
+        System.out.println(result);
     }
 }
