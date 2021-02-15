@@ -10,11 +10,11 @@ Write an algorithm that returns the count of players able to level up their char
 Input
 The input consists of three arguments:
 
-cutOffRank: an integer representing the number of elements in debt records. It is always 3
+cutOffRank: an integer representing the cutoff rank for leveling up the player's character.
 
-num : an integer representing the number of debt records
+num : an integer representing the total number of scores
 
-scores: a list of triplets representing debtRecord consisting of a string borrower, a string lender, and an integer amount, representing the debt record.
+scores: a list of integers representing the scores of the players
 
 Output
 Return an integer representing the number of players who will be able to level up their characters at the end of the round.
@@ -24,12 +24,22 @@ Constraints:
 0 <= scores[i] <= 100
 0 <= i < num
 cutOffRank <= num
+
 Examples
+
 Example 1:
 Input: cutOffRank = 3, num = 4, scores=[100, 50, 50, 25 ]
 Output: 3
 Explanation:
-In order, the players achieve the ranks [4,4,3,2,1]. Since the cutOffRank is 4, all 5 players will be able to level up their characters.
+In order, the players achieve the ranks [1,2,2,4]. Since the cutOffRank is 4, all 5 players will be able to level up their characters.
 
-So, the output is 5.
+So, the output is 3.
+
+Example 2:
+Input: cutOffRank = 4, num = 5, scores=[2, 2, 3, 4, 5]
+Output: 5
+Explanation:
+In order, the players achieve the ranks [4,4,3,2,1]. Since the cutOffRank is 4, all 5 players will be able to level up their characters.
+So the output is 5.
+
 
