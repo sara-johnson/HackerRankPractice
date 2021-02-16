@@ -1,5 +1,4 @@
 import AmazonOA.BreakAPalindrome;
-import AmazonOA.FetchItemsToDisplay;
 import AmazonOA.FillTheTruck;
 import AmazonOA.SmallestNegativeBalance;
 import ExerciseClasses.*;
@@ -7,7 +6,6 @@ import ExerciseClasses.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Map;
 
 public class App {
     public static void main(String[] args) {
@@ -86,7 +84,7 @@ public class App {
 
         FillTheTruck truck = new FillTheTruck();
         System.out.println(truck.unitsToFillTheTruck(3,
-            boxes, 3, unitsPerBox, 3));
+                boxes, 3, unitsPerBox, 3));
 
         System.out.println();
 
