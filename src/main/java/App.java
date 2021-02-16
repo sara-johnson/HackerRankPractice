@@ -1,5 +1,6 @@
 import AmazonOA.BreakAPalindrome;
 import AmazonOA.FillTheTruck;
+import AmazonOA.LRUCacheMisses;
 import AmazonOA.SmallestNegativeBalance;
 import ExerciseClasses.*;
 
@@ -139,5 +140,24 @@ public class App {
         threeKeywordSuggestions kwSuggestions = new threeKeywordSuggestions();
         List<List<String>> result = kwSuggestions.keyWordSuggestions(numbreviews, repo, query);
         System.out.println(result);
+
+        System.out.println();
+
+        System.out.println("Problem: LRU Cache Misses");
+        int num1 = 6;
+        List<Integer> pages1 = new ArrayList<>();
+        pages1.add(1);
+        pages1.add(2);
+        pages1.add(1);
+        pages1.add(3);
+        pages1.add(1);
+        pages1.add(2);
+        int maxCacheSize1 = 2;
+
+        LRUCacheMisses lruCacheMisses = new LRUCacheMisses();
+        System.out.println(lruCacheMisses.lruCacheMisses(num1, pages1, maxCacheSize1));
+
     }
+
+
 }
