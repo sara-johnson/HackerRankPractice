@@ -60,7 +60,7 @@ public class OAApp {
         scores1.add(100);
         scores1.add(50);
         scores1.add(50);
-        scores1.add(25);
+        scores1.add(25); //Answer 3
 
         int cutOff2 = 4;
         int num2 = 5;
@@ -69,9 +69,9 @@ public class OAApp {
         scores2.add(2);
         scores2.add(3);
         scores2.add(4);
-        scores2.add(5);
+        scores2.add(5);  //Answer 5
 
-        System.out.println(CutOffRank.cutOffRank(cutOff2, num2, scores2));
+        System.out.println(CutOffRank.cutOffRank(cutOff1, num1, scores1));
 
     }
 
