@@ -4,6 +4,7 @@ import AmazonOA.CutOffRank;
 import AmazonOA.FindTheHighestProfit;
 import AmazonOA.MaxDiskSpace;
 import AmazonOA.NearestCities;
+import AmazonOA.SquaredShortestDistance;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -124,6 +125,20 @@ public class OAApp {
         queries2.add("green");
 
         System.out.println(NearestCities.nearestCities(numOfCities2, cities2, xCoord2, yCoord2, numbOfQueries2, queries2));
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Problem: Shortest Squared Distance");
+        int numRobots1 = 3;
+        int[] arrX1 = {0,1,2};
+        int[] arrY1 = {0,1,4};
+
+        int numRobots2 = 3;
+        int[] arrX2 = {0,2,0};
+        int[] arrY2 = {0,3,0};
+
+        System.out.println(SquaredShortestDistance.shortestDistance(numRobots2, arrX2, arrY2));
     }
 
 }
