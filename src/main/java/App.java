@@ -111,10 +111,10 @@ public class App {
 
         System.out.println("Problem: Break A Palindrome");
         String str1 = "abccba";
-        String str2 = "a";
+        String str2 = "abccba";
         String str3 = "bdggdb";
         BreakAPalindrome breakPalindrome = new BreakAPalindrome();
-        System.out.println(breakPalindrome.breakPalindrome(str3));
+        System.out.println(breakPalindrome.breakPalindrome(str2));
 
         System.out.println();
 
