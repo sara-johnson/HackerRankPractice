@@ -2,6 +2,7 @@ package AmazonOA;
 
 import java.util.ArrayList;
 import java.util.Comparator;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.SortedMap;
@@ -9,7 +10,7 @@ import java.util.SortedMap;
 public class FetchItemsToDisplay {
 
     public List<String> fetchItems(int sortParam, int sortOrder, int itemsPerPage,
-                                   int pageNumber, int numOfItems, SortedMap<String, TwoInts> items) {
+                                   int pageNumber, int numOfItems, HashMap<String, TwoInts> items) {
 
 
         Comparator<Map.Entry<String, TwoInts>> compareItems = new Comparator<Map.Entry<String, TwoInts>>() {
@@ -32,13 +33,13 @@ public class FetchItemsToDisplay {
         int endItem = startItem + itemsPerPage;
 
         List<String> finalList = new ArrayList<>();
-        for (int i = startItem; i < endItem; i++) {
+        for (int i = startItem; i < endItem - 1; i++) {
             finalList.add(sortedList.get(i).getKey());
         }
         return finalList;
     }
 
-    public class TwoInts {
+    public static class TwoInts {
         int relevance;
         int price;
 

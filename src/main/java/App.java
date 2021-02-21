@@ -1,13 +1,17 @@
 import AmazonOA.BreakAPalindrome;
 
 import AmazonOA.CountTeams;
+import AmazonOA.FetchItemsToDisplay;
 import AmazonOA.FillTheTruck;
 import AmazonOA.LRUCacheMisses;
 import AmazonOA.SmallestNegativeBalance;
+//import AmazonOA.SplitStringIntoPrimes;
+import AmazonOA.SplitStringIntoPrimes;
 import ExerciseClasses.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
 
 public class App {
@@ -19,14 +23,11 @@ public class App {
         System.out.println("Problem: CountTeams");
         int numOfAssociates1 = 6;
         int[] skills1 = {12,4,6,12,5,10};
-        int minAssocaites1 = 3;
+        int minAssociates1 = 3;
         int minLevel1 = 4;
         int maxLevel1 = 10;
 
-        System.out.println(CountTeams.countTeams(numOfAssociates1,skills1, minAssocaites1, minLevel1,maxLevel1));
-
-
-
+        System.out.println(CountTeams.countTeams(numOfAssociates1,skills1, minAssociates1, minLevel1,maxLevel1));
 
         System.out.println();
         System.out.println("Problem: Keyword Suggestions");
@@ -135,17 +136,20 @@ public class App {
         System.out.println();
 
         System.out.println("Problem: Fetch Items To Display");
-        /*
+
         FetchItemsToDisplay.TwoInts twoInts1 = new FetchItemsToDisplay.TwoInts(3,4);
         FetchItemsToDisplay.TwoInts twoInts2 = new FetchItemsToDisplay.TwoInts(10,15);
         FetchItemsToDisplay.TwoInts twoInts3 = new FetchItemsToDisplay.TwoInts(17,8);
-        List<Map<String, FetchItemsToDisplay.TwoInts>> myMap = new ArrayList<>();
-        myMap.add("item2", twoInts1);
+
+
+        HashMap<String, FetchItemsToDisplay.TwoInts> myMap = new HashMap<String, FetchItemsToDisplay.TwoInts>();
+        myMap.put("item2", twoInts1);
+        myMap.put("item1", twoInts2);
+        myMap.put("item3", twoInts3);
 
         FetchItemsToDisplay fetchItems = new FetchItemsToDisplay();
-        List<String> items = fetchItems.fetchItems(1, 0, items, 1, 2);
-
-         */
+        List<String> items = fetchItems.fetchItems(1, 0, 2, 1, 2, myMap);
+        System.out.println(items);
 
         System.out.println();
 
@@ -172,6 +176,17 @@ public class App {
 
         LRUCacheMisses lruCacheMisses = new LRUCacheMisses();
         System.out.println(lruCacheMisses.lruCacheMisses(num1, pages1, maxCacheSize1));
+
+        System.out.println();
+
+        System.out.println("Problem: Ways To Split Primes");
+        String input1 = "3175";
+        int length1 = input1.length();
+        System.out.println(SplitStringIntoPrimes.waysToSplitStringIntoPrimes(input1, length1));
+
+
+
+
 
     }
 

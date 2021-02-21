@@ -16,7 +16,7 @@ public class CountTeams {
         //Create a new array to hold the first set of factorials
         int[] teams = new int[counter + 1];
         teams[0] = 1;
-        for (int i = 1; i < numOfAssociates; i++) {
+        for (int i = 1; i < teams.length; i++) {
             teams[i] = teams[i - 1] * i;
         }
 
