@@ -1,4 +1,6 @@
 import AmazonOA.BreakAPalindrome;
+
+import AmazonOA.CountTeams;
 import AmazonOA.FillTheTruck;
 import AmazonOA.LRUCacheMisses;
 import AmazonOA.SmallestNegativeBalance;
@@ -13,6 +15,20 @@ public class App {
         System.out.println("LeetCode Practice:");
         System.out.println();
 
+
+        System.out.println("Problem: CountTeams");
+        int numOfAssociates1 = 6;
+        int[] skills1 = {12,4,6,12,5,10};
+        int minAssocaites1 = 3;
+        int minLevel1 = 4;
+        int maxLevel1 = 10;
+
+        System.out.println(CountTeams.countTeams(numOfAssociates1,skills1, minAssocaites1, minLevel1,maxLevel1));
+
+
+
+
+        System.out.println();
         System.out.println("Problem: Keyword Suggestions");
         String[] myProducts1 = new String[]{"bags", "baggage", "banner", "box", "cloths"};
         String myWord1 = "bags";
