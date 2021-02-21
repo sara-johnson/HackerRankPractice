@@ -139,6 +139,13 @@ public class OAApp {
         int[] arrY2 = {0,3,0};
 
         System.out.println(SquaredShortestDistance.shortestDistance(numRobots2, arrX2, arrY2));
+
+        System.out.println();
+        System.out.println();
+
+        System.out.println("Problem: Subtree with Max Average");
+
+
     }
 
 }
