@@ -10,7 +10,6 @@ public class MinTotalContainerSize {
     public static int minContainerSize(List<Integer> itemSizes, int days) {
 
 
-
         return 1;
 
     }
